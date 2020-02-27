@@ -14,7 +14,7 @@ public class CommandThread extends Thread{
 	public void run() {
 		
 		ProcessBuilder processBuilder = new ProcessBuilder();
-		 processBuilder.command("bash", "-c", comando);
+		processBuilder.command("bash", "-c", comando);
 			
 			try {
 				Process process = processBuilder.start();			
