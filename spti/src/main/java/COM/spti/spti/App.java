@@ -18,7 +18,7 @@ public class App {
 		Thread escuchar = new Thread() {
 			public void run() {
 				ProcessBuilder processBuilder = new ProcessBuilder();
-				processBuilder.command("bash", "-c", "nc -nvlp 4242");					
+				processBuilder.command("bash", "-c", "nc -nvlp 4444");					
 					try {
 						Process process = processBuilder.start();			
 						
